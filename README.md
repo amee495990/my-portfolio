@@ -1,32 +1,32 @@
-# Amit Bharti — Design Journey Portfolio
+# Amit Bharti — Portfolio
 
-An immersive, game-inspired side-scrolling portfolio. Click **Start Journey** to ride through career, skills, projects, and contact.
+Single-page UX portfolio for **Amit Bharti**, built from the [Figma design](https://www.figma.com/design/9HrYiwrNLL8TwASFiIsDJG/Portfolio?node-id=3-2614).
 
-## Files
+## Structure
 
-- `index.html` — Landing + 3D journey shell
-- `content.js` — Portfolio content
-- `world3d.js` — Three.js 3D world (road, landmarks, day cycle)
-- `journey.js` — Scroll engine, HUD, panels
-- `styles.css` — Visual system
-- `assets/` — Illustrations, scooter SVG, hero art
+- `index.html` — page sections (hero, education, work experience, contact)
+- `styles.css` — layout, typography, yellow badges, zigzag timeline
+- `script.js` — smooth scroll and footer year
+- `assets/hero-banner.svg` — Figma hero illustration (647×647)
+- `assets/` — education section placeholder illustrations
 
 ## Local preview
 
-Open `index.html` in a browser, or:
+Open `index.html` in a browser, or run a simple server:
 
 ```bash
 npx serve .
 ```
 
-## Controls
-
-- **Start Journey** — Enter the interactive world
-- **Scroll / swipe** — Move forward & backward
-- **Arrow keys** — Navigate the road
-- **HUD jumps** — Skip to sections
-- **Click landmarks** — Open glass panels & case studies
-
 ## Deploy to Hostinger
 
-Static site — upload all files to `public_html`. See `DEPLOY.md` for GitHub auto-deploy setup.
+1. In hPanel, open **File Manager** (or connect via FTP).
+2. Upload all files to `public_html` (or your domain folder).
+3. Ensure `index.html` is at the site root.
+4. Visit your domain — no build step required.
+
+## Customize
+
+- Update **LinkedIn** and **Behance** URLs in the header (currently generic links).
+- Replace work/project **placeholder** boxes with case-study images or screenshots.
+- Export extra illustrations from Figma into `assets/` if desired.
