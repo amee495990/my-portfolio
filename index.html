@@ -5,474 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Amit Bharti — Senior UX Designer. Work in SaaS, AI, and enterprise product design across media, EdTech, and digital products."
+      content="Amit Bharti — Senior UX Designer. Ride through an interactive design journey across SaaS, AI, and enterprise product work."
     />
-    <title>Amit Bharti — Senior UX Designer</title>
+    <title>Amit Bharti — Design Journey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
   </head>
   <body>
-    <div class="scroll-progress" aria-hidden="true">
-      <span class="scroll-progress__bar" id="scroll-progress-bar"></span>
-    </div>
-
-    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
-
-    <div class="page-deco" id="page-deco" aria-hidden="true">
-      <span class="page-deco__ring page-deco__ring--1"></span>
-      <span class="page-deco__ring page-deco__ring--2"></span>
-      <span class="page-deco__cross page-deco__cross--tl"></span>
-      <span class="page-deco__cross page-deco__cross--br"></span>
-      <img class="page-deco__dots" src="assets/deco-dots.svg" alt="" width="120" height="120" />
-      <img class="page-deco__spark" src="assets/deco-spark.svg" alt="" width="48" height="48" />
-    </div>
-
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-    <header class="site-header" id="site-header">
-      <a href="#" class="logo">Amit Bharti</a>
-      <nav class="main-nav" aria-label="Main">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="social-links" aria-label="Social media">
-        <a
-          href="https://www.linkedin.com/in/amit-bharti-568a1b139"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          title="LinkedIn"
-        >
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path
-              fill="currentColor"
-              d="M20.45 20.45h-3.56v-5.59c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22 0H2C.9 0 0 .9 0 2v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://www.behance.net/amitbharti1"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Behance"
-          title="Behance"
-        >
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path
-              fill="currentColor"
-              d="M22 7h-7V5h7v2zm1.5 9.5c-.64 2.3-2.72 4-5.2 4-3.31 0-6-2.69-6-6s2.69-6 6-6c2.1 0 3.9 1.08 4.9 2.7H20.2c-.9-1.45-2.5-2.4-4.4-2.4-2.87 0-5.2 2.33-5.2 5.2S13 16.7 15.87 16.7c1.75 0 3.28-.88 4.13-2.2H15v-1.5h8.5c.03.32.05.65.05 1zM0 5h8v1.6H5.6V8H7.8v1.5H5.6v3.9c0 1.5.75 2.25 2.25 2.25.75 0 1.35-.15 1.8-.45V17c-.6.3-1.35.45-2.25.45-2.25 0-3.75-1.2-3.75-3.75V9.5H0V5z"
-            />
-          </svg>
-        </a>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero reveal" id="about">
-        <p class="section-eyebrow reveal">01 — About</p>
-        <div class="hero-content reveal-stagger">
-          <h1>
-            Hello, I am
-            <span class="name" data-text="Amit Bharti">Amit Bharti</span>
+    <!-- LANDING -->
+    <div id="landing" class="landing">
+      <div class="landing__grain" aria-hidden="true"></div>
+      <header class="landing__header">
+        <span class="landing__logo">Amit Bharti</span>
+        <div class="landing__social">
+          <a href="https://www.linkedin.com/in/amit-bharti-568a1b139" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.behance.net/amitbharti1" target="_blank" rel="noopener" aria-label="Behance">Be</a>
+        </div>
+      </header>
+      <main class="landing__main">
+        <div class="landing__copy">
+          <p class="landing__eyebrow">Senior UX Designer · Portfolio Journey</p>
+          <h1 class="landing__title">
+            Ride through my<br />
+            <em>design journey</em>
           </h1>
-          <p class="hero-role">
-            Senior UX Designer ·
-            <span class="hero-rotate" aria-live="polite">
-              <span class="hero-rotate__word is-active">SaaS</span>
-              <span class="hero-rotate__word">AI products</span>
-              <span class="hero-rotate__word">Enterprise UX</span>
-              <span class="hero-rotate__word">Design systems</span>
-            </span>
-          </p>
-          <p class="hero-text">
-            Nearly 8 years designing intuitive, scalable experiences across
-            SaaS, AI-powered, and enterprise platforms in Media, EdTech, and
-            digital products. I lead end-to-end UX at SymphonyAI Media—from
-            research and IA to design systems and high-fidelity UI—for global
-            clients including Warner Bros. Discovery (HBO).
-          </p>
-          <p class="hero-objective">
-            I work at the intersection of <strong>research</strong>,
-            <strong>systems thinking</strong>, and craft—shaping products that
-            feel clear, scalable, and grounded in how people actually work.
-          </p>
-          <ul class="hero-stats" aria-label="Career highlights">
-            <li>
-              <span class="hero-stats__value" data-count="8" data-suffix="+">0</span>
-              <span class="hero-stats__label">Years in UX</span>
-            </li>
-            <li>
-              <span class="hero-stats__value" data-count="60" data-suffix="%">0</span>
-              <span class="hero-stats__label">Faster with AI tools</span>
-            </li>
-            <li>
-              <span class="hero-stats__value" data-count="65" data-suffix="%">0</span>
-              <span class="hero-stats__label">Feature adoption lift</span>
-            </li>
-          </ul>
-          <div class="hero-actions">
-            <a href="#contact" class="btn-primary magnetic">Get in touch</a>
-            <a href="tel:+919041209208" class="hero-link magnetic">+91 9041209208</a>
+          <p class="landing__lead" id="landing-intro"></p>
+          <div class="landing__chips" id="landing-chips"></div>
+          <button type="button" class="btn-start" id="btn-start">
+            <span class="btn-start__text">Start Journey</span>
+            <span class="btn-start__icon" aria-hidden="true">→</span>
+          </button>
+          <p class="landing__hint">Scroll · Arrow keys · Click 3D landmarks to explore</p>
+        </div>
+        <div class="landing__visual">
+          <div class="landing__portrait-ring"></div>
+          <img src="assets/hero-banner.svg" alt="Amit Bharti" class="landing__portrait" width="400" height="400" />
+          <div class="landing__badge">
+            <span id="landing-years">8+</span>
+            <small>Years UX</small>
           </div>
         </div>
-        <div class="hero-visual reveal reveal-delay-2">
-          <div class="line-art-frame line-art-frame--hero tilt-target">
-            <span class="line-art-frame__corner line-art-frame__corner--tl"></span>
-            <span class="line-art-frame__corner line-art-frame__corner--br"></span>
-            <img
-              src="assets/hero-banner.svg"
-              alt="Illustration of a UX designer at a desk with laptop and design tools"
-              width="647"
-              height="647"
-              decoding="async"
-              class="hero-banner-img"
-            />
-          </div>
+      </main>
+      <noscript>
+        <section class="noscript-fallback">
+          <h2>Amit Bharti — Senior UX Designer</h2>
+          <p>Nearly 8 years in SaaS, AI, and enterprise UX at SymphonyAI Media.</p>
+          <p>Email: maranatha.amee@gmail.com · Phone: +91 9041209208</p>
+        </section>
+      </noscript>
+    </div>
+
+    <!-- JOURNEY WORLD -->
+    <div id="journey" class="journey" hidden>
+      <div class="hud" role="navigation" aria-label="Journey navigation">
+        <button type="button" class="hud__exit" id="btn-exit" title="Back to landing">← Exit</button>
+        <div class="hud__progress">
+          <span class="hud__label">Journey</span>
+          <div class="hud__bar"><span class="hud__fill" id="hud-fill"></span></div>
+          <span class="hud__km" id="hud-km">0 km</span>
         </div>
-      </section>
+        <nav class="hud__nav" id="hud-nav" aria-label="Jump to section"></nav>
+      </div>
 
-      <section class="about-panel reveal" id="skills">
-        <div class="about-panel__inner">
-          <p class="section-eyebrow section-eyebrow--center reveal">02 — Profile</p>
-          <h2 class="section-title section-title--center reveal">Profile &amp; Skills</h2>
+      <div class="journey-viewport" id="viewport">
+        <div id="canvas-host" class="canvas-host"></div>
 
-          <div class="about-panel__layout">
-          <figure class="about-panel__art reveal tilt-target" aria-hidden="true">
-            <div class="line-art-frame line-art-frame--compact">
-              <img src="assets/art-skills.svg" alt="" width="280" height="280" class="line-art-img" />
-            </div>
-          </figure>
+        <aside class="glass-panel" id="glass-panel" aria-live="polite" hidden>
+          <button type="button" class="glass-panel__close" id="panel-close" aria-label="Close panel">×</button>
+          <div class="glass-panel__inner" id="panel-inner"></div>
+        </aside>
 
-          <div class="about-grid">
-            <div class="about-block">
-              <h3 class="about-block__title">Core competencies</h3>
-              <ul class="tag-list tag-list--interactive">
-                <li>UX &amp; Product Design</li>
-                <li>User Research &amp; Analysis</li>
-                <li>Interaction Design</li>
-                <li>Information Architecture</li>
-                <li>Design Systems</li>
-                <li>Usability Testing</li>
-                <li>UX Strategy</li>
-                <li>Conversion Optimization</li>
-                <li>Agile Execution</li>
-                <li>Stakeholder Management</li>
-              </ul>
-            </div>
-            <div class="about-block">
-              <h3 class="about-block__title">Technical skills</h3>
-              <ul class="tag-list tag-list--interactive">
-                <li>Figma · FigJam · Figma Make</li>
-                <li>Sketch · InVision · Adobe XD</li>
-                <li>Cursor AI</li>
-                <li>HTML &amp; CSS</li>
-                <li>Adobe Creative Suite</li>
-                <li>A/B Testing &amp; CRO</li>
-              </ul>
-              <h3 class="about-block__title about-block__title--spaced">
-                Soft skills
-              </h3>
-              <ul class="tag-list tag-list--interactive">
-                <li>Communication</li>
-                <li>Leadership</li>
-                <li>Adaptability</li>
-                <li>Problem Solving</li>
-                <li>Critical Thinking</li>
-              </ul>
-            </div>
-          </div>
-          </div>
-
-          <h3 class="subsection-title">Notable accomplishments</h3>
-          <div class="accomplishment-list">
-            <article class="accomplishment-card reveal">
-              <span class="badge">AI &amp; efficiency</span>
-              <p>
-                Reduced design effort by <strong>60%</strong> with Figma Make
-                and improved design-to-dev turnaround by
-                <strong>40%</strong> through reusable components.
-              </p>
-            </article>
-            <article class="accomplishment-card reveal">
-              <span class="badge">Design systems</span>
-              <p>
-                Built centralized design systems at SymphonyAI, cutting
-                redundancy by <strong>50%</strong>.
-              </p>
-            </article>
-            <article class="accomplishment-card reveal">
-              <span class="badge">UX impact</span>
-              <p>
-                Reduced drop-offs via UX audits and increased feature adoption
-                by <strong>65%</strong> through journey redesigns.
-              </p>
-            </article>
-          </div>
+        <div class="journey-hint" aria-hidden="true">
+          <span>Scroll to ride</span>
+          <span class="journey-hint__keys">↑ ↓ ← →</span>
         </div>
-      </section>
+      </div>
 
-      <section class="experience timeline-section reveal" id="experience">
-        <p class="section-eyebrow section-eyebrow--right reveal">03 — Experience</p>
-        <div class="experience-header reveal">
-          <h2 class="section-title section-title--right">Work Experience</h2>
-          <hr class="dotted-rule" />
-        </div>
+      <div class="scroll-spacer" id="scroll-spacer"></div>
+    </div>
 
-        <article class="timeline-row reveal">
-          <div class="timeline-visual">
-            <figure class="line-art-frame tilt-target">
-              <img src="assets/art-hbo.svg" alt="" width="360" height="360" class="line-art-img" />
-            </figure>
-          </div>
-          <div class="timeline-content">
-            <span class="badge badge--pop">Oct 2022 – Present</span>
-            <h3>Senior UX Designer</h3>
-            <p class="subtitle">SymphonyAI Media · Bengaluru</p>
-            <ul>
-              <li>
-                Lead end-to-end UX for AI-powered SaaS products across the full
-                lifecycle—research, ideation, wireframes, and high-fidelity UI.
-              </li>
-              <li>
-                Design dashboards and workflows for FAST, AVOD, TVOD, and Pay
-                TV for global media clients including Warner Bros. Discovery
-                (HBO).
-              </li>
-              <li>
-                Build centralized design systems; use Figma Make and Cursor AI
-                to accelerate delivery.
-              </li>
-              <li>
-                Partner with PMs, engineers, and stakeholders on predictive
-                insights, automated workflows, and intelligent data mapping.
-              </li>
-            </ul>
-          </div>
-        </article>
+    <!-- Case study modal -->
+    <dialog class="case-modal" id="case-modal" aria-labelledby="case-title">
+      <button type="button" class="case-modal__close" id="case-close" aria-label="Close">×</button>
+      <div class="case-modal__body" id="case-body"></div>
+    </dialog>
 
-        <article class="timeline-row timeline-row--reverse reveal">
-          <div class="timeline-content">
-            <span class="badge">Nov 2020 – Oct 2022</span>
-            <h3>UI/UX Designer</h3>
-            <p class="subtitle">Neil Patel Digital India · Bengaluru</p>
-            <ul>
-              <li>
-                Designed websites and apps for e-commerce, design automation,
-                and EdTech clients.
-              </li>
-              <li>
-                Improved usability, engagement, and conversion-focused
-                experiences with responsive frameworks.
-              </li>
-              <li>
-                Applied UX frameworks, A/B testing, and data-informed design
-                decisions.
-              </li>
-            </ul>
-          </div>
-          <div class="timeline-visual">
-            <figure class="line-art-frame tilt-target">
-              <img src="assets/art-analytics.svg" alt="" width="360" height="360" class="line-art-img" />
-            </figure>
-          </div>
-        </article>
+    <div class="toast" id="toast" role="status"></div>
 
-        <article class="timeline-row reveal">
-          <div class="timeline-visual">
-            <figure class="line-art-frame tilt-target">
-              <img src="assets/art-vidu.svg" alt="" width="360" height="360" class="line-art-img" />
-            </figure>
-          </div>
-          <div class="timeline-content">
-            <span class="badge">Mar 2019 – Oct 2020</span>
-            <h3>UI/UX Designer</h3>
-            <p class="subtitle">TopRankers · Bengaluru</p>
-            <ul>
-              <li>
-                Designed dashboards, websites, and mobile apps for the Vidu
-                online-class platform.
-              </li>
-              <li>
-                Collaborated with product and engineering to improve usability
-                and platform scalability.
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-row timeline-row--reverse reveal">
-          <div class="timeline-content">
-            <span class="badge">Sep 2018 – Feb 2019</span>
-            <h3>Designer &amp; Web Developer</h3>
-            <p class="subtitle">DigiFame · Chandigarh</p>
-            <ul>
-              <li>Created brand assets, landing pages, and marketing sites.</li>
-              <li>
-                Managed front-end development and delivered functional user
-                experiences.
-              </li>
-            </ul>
-          </div>
-          <div class="timeline-visual">
-            <figure class="line-art-frame tilt-target">
-              <img src="assets/art-brand.svg" alt="" width="360" height="360" class="line-art-img" />
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section class="education timeline-section reveal" id="education">
-        <p class="section-eyebrow section-eyebrow--center reveal">04 — Education</p>
-        <h2 class="section-title section-title--center reveal">Education</h2>
-
-        <article class="timeline-row reveal">
-          <div class="timeline-visual">
-            <figure class="line-art-frame line-art-frame--photo tilt-target">
-              <img
-                src="assets/edu-master.svg"
-                alt="Chandigarh University — master program illustration"
-                width="458"
-                height="458"
-                class="line-art-img"
-              />
-            </figure>
-          </div>
-          <div class="timeline-content">
-            <span class="badge">Completed 2018</span>
-            <h3>Master of Computer Application (MCA)</h3>
-            <p class="subtitle">Chandigarh University, Punjab</p>
-          </div>
-        </article>
-
-        <article class="timeline-row timeline-row--reverse reveal">
-          <div class="timeline-content">
-            <span class="badge">Completed 2015</span>
-            <h3>Bachelor of Computer Application (BCA)</h3>
-            <p class="subtitle">Kurukshetra University, Haryana</p>
-          </div>
-          <div class="timeline-visual">
-            <figure class="line-art-frame line-art-frame--photo tilt-target">
-              <img
-                src="assets/edu-college.svg"
-                alt="Kurukshetra University — bachelor program illustration"
-                width="471"
-                height="471"
-                class="line-art-img"
-              />
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section class="projects timeline-section reveal" id="projects">
-        <p class="section-eyebrow section-eyebrow--center reveal">05 — Projects</p>
-        <h2 class="section-title section-title--center reveal">Selected Projects</h2>
-
-        <article class="timeline-row reveal">
-          <div class="timeline-visual">
-            <figure class="line-art-frame tilt-target">
-              <img src="assets/art-hbo.svg" alt="" width="360" height="360" class="line-art-img" />
-            </figure>
-          </div>
-          <div class="timeline-content">
-            <span class="badge badge--pop">Media &amp; streaming</span>
-            <h3>Warner Bros. Discovery (HBO) Platform</h3>
-            <p class="subtitle">SymphonyAI Media</p>
-            <p class="project-desc">
-              UX for media and streaming analytics platforms—improving content
-              performance workflows and decision-making for global entertainment
-              clients.
-            </p>
-          </div>
-        </article>
-
-        <article class="timeline-row timeline-row--reverse reveal">
-          <div class="timeline-content">
-            <span class="badge">AI · Revenue analytics</span>
-            <h3>Revedia Platform</h3>
-            <p class="subtitle">SymphonyAI</p>
-            <p class="project-desc">
-              End-to-end UX for an AI-driven revenue analytics SaaS
-              product—dashboards and workflows that help teams act on complex
-              data faster.
-            </p>
-          </div>
-          <div class="timeline-visual">
-            <figure class="line-art-frame tilt-target">
-              <img src="assets/art-revedia.svg" alt="" width="360" height="360" class="line-art-img" />
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section class="contact reveal" id="contact">
-        <p class="section-eyebrow section-eyebrow--center reveal">06 — Contact</p>
-        <h2 class="section-title section-title--center reveal">Get in touch</h2>
-        <div class="contact-grid">
-          <figure class="contact-visual reveal tilt-target" aria-hidden="true">
-            <div class="line-art-frame line-art-frame--compact">
-              <img src="assets/art-contact.svg" alt="" width="300" height="300" class="line-art-img" />
-            </div>
-          </figure>
-          <div class="contact-body">
-            <p class="contact-lead">
-              For project conversations, design feedback, or a thoughtful
-              exchange of ideas—reach out anytime.
-            </p>
-            <ul class="contact-details">
-              <li class="contact-card">
-                <span class="contact-label">Phone</span>
-                <a href="tel:+919041209208" class="magnetic">+91 9041209208</a>
-              </li>
-              <li class="contact-card">
-                <span class="contact-label">Email</span>
-                <button
-                  type="button"
-                  class="contact-copy magnetic"
-                  data-copy="maranatha.amee@gmail.com"
-                >
-                  maranatha.amee@gmail.com
-                </button>
-              </li>
-              <li class="contact-card">
-                <span class="contact-label">Location</span>
-                <span>Bengaluru – 560037</span>
-              </li>
-              <li class="contact-card">
-                <span class="contact-label">Languages</span>
-                <span>English · Hindi · Punjabi</span>
-              </li>
-            </ul>
-            <a href="mailto:maranatha.amee@gmail.com" class="btn-primary magnetic contact-cta">
-              Say hello
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>
-        Crafted with line art &amp; motion ·
-        <span class="footer-spark" aria-hidden="true"></span>
-        &copy; <span id="year"></span> Amit Bharti
-      </p>
-    </footer>
-
-    <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-        <path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z"/>
-      </svg>
-    </button>
-
-    <script src="script.js"></script>
+    <script src="content.js"></script>
+    <script type="module" src="journey.js"></script>
   </body>
 </html>
